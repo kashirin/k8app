@@ -1,0 +1,7 @@
+version: '2'
+services:
+  front-builder: 
+    image: k8app/backendapp
+    volumes:
+      - ../:/code
+    command: tail -f /dev/null
