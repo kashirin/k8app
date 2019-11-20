@@ -1,0 +1,1 @@
+docker-compose -f docker/docker-compose-front-builder.yml up

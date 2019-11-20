@@ -1,0 +1,11 @@
+version: '2'
+services:
+  frontendapp: 
+    image: k8app/frontendapp
+    ports:
+      - 8180:80
+      #- 443:443
+  backendapp: 
+    image: k8app/backendapp
+    ports:
+      - 3443:3443

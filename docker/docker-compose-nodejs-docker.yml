@@ -1,0 +1,7 @@
+version: '2'
+services:
+  nodejs-docker: 
+    image: k8app/nodejs
+    volumes:
+      - ../:/code
+    command: tail -f /dev/null

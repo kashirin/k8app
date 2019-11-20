@@ -1,0 +1,15 @@
+version: '2'
+services:
+  frontendapp: 
+    image: nginx
+    ports:
+      - 8180:80
+    volumes:
+      - ../dist:/usr/share/nginx/html
+  backendapp: 
+    image: k8app/nodejs
+    ports:
+      - 3443:3443
+    volumes:
+      - ../:/code
+    command: sh -c "cd /code && node src/backend/start_server.js"

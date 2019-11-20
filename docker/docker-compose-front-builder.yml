@@ -1,7 +1,8 @@
 version: '2'
 services:
   front-builder: 
-    image: k8app/backendapp
+    image: k8app/nodejs
     volumes:
       - ../:/code
-    command: tail -f /dev/null
+    #command: tail -f /dev/null
+    command: sh -c "cd /code && npm run build"

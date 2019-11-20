@@ -1,0 +1,1 @@
+docker-compose -f docker/docker-compose-run-whole-dev-app.yml up
