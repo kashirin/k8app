@@ -13,7 +13,7 @@ class RedButton extends Component {
     handleClick() {
 
 
-        fetch('http://10.41.2.25:3443/getfib')
+        fetch(window.location.protocol+'//'+window.location.hostname+':'+3443+'/getfib')
         .then(response => response.json())
         .then(r => {
             this.setState(state => ({
