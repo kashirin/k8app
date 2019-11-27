@@ -1,5 +1,10 @@
 import express from 'express';
+
+
 const app = express();
+
+
+
 const port = 3443;
 
 const fib = (n) => {
@@ -17,7 +22,7 @@ app.use(function(req, res, next) {
     next();
 });
 
-app.get('/getfib', function (req, res) {
+app.get('/data/getfib', function (req, res) {
 
     let rn = randomInteger(34,42);
 
