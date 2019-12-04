@@ -24,13 +24,13 @@ app.use(function(req, res, next) {
 
 app.get('/data/getfib', function (req, res) {
 
-    let rn = randomInteger(34,42);
+    let rn = randomInteger(34,43);
 
     let str = 'Число Фибоначчи '+rn+' = '+fib(rn);
 
-
+    console.log('str: ',str);
 
     res.send(JSON.stringify({text: str}));
 });
   
-app.listen(port, () => console.log('Example app listening on port '+port+'!'));
+app.listen(port, () => console.log('Example app v1 listening on port '+port+'!'));

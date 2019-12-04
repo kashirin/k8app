@@ -46,7 +46,7 @@ class RedButton extends Component {
     }
     
     render() {
-        return <div><button onClick={this.handleClick} style={{color:'red'}}>Получить ответ</button><br/><br/>
+        return <div><button onClick={this.handleClick} style={{color:'red'}}>Узнать</button><br/><br/>
         <span>{this.state.result}</span>
         </div>;
     }

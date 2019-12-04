@@ -21,6 +21,11 @@ spec:
       containers:
         - name: sa-backend
           image: k8app/backendapp
+          resources:
+            limits:
+              cpu: "1"
+            requests:
+              cpu: 100m
           imagePullPolicy: Never
           ports:
             - containerPort: 3443
