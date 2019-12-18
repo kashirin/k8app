@@ -32,5 +32,17 @@ app.get('/data/getfib', function (req, res) {
 
     res.send(JSON.stringify({text: str}));
 });
+
+
+app.get('/data/gettable', function (req, res) {
+
+    const table = [
+        {fruit: 'apple',  color: 'green'},
+        {fruit: 'orange', color: 'orange'},
+        {fruit: 'plum',   color: 'yellow'}
+    ];
+
+    res.send(JSON.stringify({table: table}));
+});
   
 app.listen(port, () => console.log('Example app v1 listening on port '+port+'!'));
