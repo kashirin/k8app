@@ -32,8 +32,6 @@ class ItemCard extends Component {
 
     render() {
 
-        console.log('this.props',this.props, 'this.state', this.state);
-
         return <div>
         <input onChange={ev => this.handleInput(ev)}></input>
         <button onClick={e => {

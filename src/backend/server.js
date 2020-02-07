@@ -37,12 +37,16 @@ app.get('/data/getfib', function (req, res) {
 app.get('/data/gettable', function (req, res) {
 
     const table = [
-        {fruit: 'apple',  color: 'green'},
-        {fruit: 'orange', color: 'orange'},
-        {fruit: 'plum',   color: 'yellow'}
+        {fruit: 'apple',  color: 'green', 'price': '1.30'},
+        {fruit: 'orange', color: 'orange', 'price': '2.10'},
+        {fruit: 'plum',   color: 'yellow', 'price': '3.00'}
     ];
 
-    res.send(JSON.stringify({table: table}));
+    setTimeout(()=>{
+        res.send(JSON.stringify({table: table}));
+    },4000);
+
+    
 });
   
 app.listen(port, () => console.log('Example app v1 listening on port '+port+'!'));

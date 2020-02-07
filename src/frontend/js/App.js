@@ -3,6 +3,7 @@ import ItemCard from './components/ItemCard';
 import CopyCard from './components/CopyCard';
 
 import Observer from './helpers/observer';
+import FruitCard from "./components/FruitCard";
 
 class App extends Component {
     constructor(props) {
@@ -30,6 +31,12 @@ class App extends Component {
                 </div>
                 <div className="row">
                     <CopyCard/>
+                </div>
+                <div className="row">
+                    <FruitCard name="apple" />
+                </div>
+                <div className="row">
+                    <FruitCard name="orange" />
                 </div>
                 <span>{this.state.light}</span>
             </div>
