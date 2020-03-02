@@ -7,7 +7,7 @@ const INITIAL_STATE = {
     loaded: false
 };
 
-const fruitCardReducer = (state = INITIAL_STATE, action = {}) => {
+const hookCardReducer = (state = INITIAL_STATE, action = {}) => {
     //console.log('in reducer', action, state);
     switch (action.type) {
         case types.IN_REQUEST:
@@ -46,15 +46,15 @@ const fruitCardReducer = (state = INITIAL_STATE, action = {}) => {
     }
 };
 
-export default fruitCardReducer;
+export default hookCardReducer;
 
 export const selectors = {
     getState(store) {
-        return (store.fruitCardState)?store.fruitCardState:null;
+        return (store.hookCardState)?store.hookCardState:null;
     },
     isLoaded(store) {
-        if(store.fruitCardState){
-            if(store.fruitCardState.loaded && !store.fruitCardState.error){
+        if(store.hookCardState){
+            if(store.hookCardState.loaded && !store.hookCardState.error){
                 return true;
             }else{
                 return false;
@@ -63,10 +63,22 @@ export const selectors = {
             return false;
         }
     },
+    getFruits(store) {
+        if(store.hookCardState){
+            if(store.hookCardState.loaded){
+                return store.hookCardState.items;
+            }else{
+                return [];
+            }
+            
+        }else{
+            return [];
+        }
+    },
     getFruit(store, fruit) {
-        if(store.fruitCardState){
-            if(store.fruitCardState.loaded){
-                const item = store.fruitCardState.items.find(el => el.fruit == fruit);
+        if(store.hookCardState){
+            if(store.hookCardState.loaded){
+                const item = store.hookCardState.items.find(el => el.fruit == fruit);
                 if(item){
                     return item;
                 }else{

@@ -3,7 +3,10 @@ import ItemCard from './components/ItemCard';
 import CopyCard from './components/CopyCard';
 
 import Observer from './helpers/observer';
-import FruitCard from "./components/FruitCard";
+//import FruitCard from "./components/FruitCard";
+import HookCard from "./components/HookCard";
+
+//import CreatePdf from './components/CreatePdf';
 
 class App extends Component {
     constructor(props) {
@@ -33,11 +36,17 @@ class App extends Component {
                     <CopyCard/>
                 </div>
                 <div className="row">
+                    <HookCard favoriteFruit="apple"/>
+                </div>
+                {/*<div className="row">
                     <FruitCard name="apple" />
                 </div>
                 <div className="row">
                     <FruitCard name="orange" />
-                </div>
+                </div>*/}
+                {/*<div className="row">
+                    <CreatePdf />
+                </div>*/}
                 <span>{this.state.light}</span>
             </div>
             
